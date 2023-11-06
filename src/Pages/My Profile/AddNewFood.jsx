@@ -1,8 +1,53 @@
-const AddNewFood = () => {
-    return (
-        <div className="max-w-7xl mx-auto px-6 py-28" data-aos="fade-up"
-            data-aos-duration="1000">
+import { useContext } from "react";
+import Swal from "sweetalert2";
+import { AuthContext } from "../../Hooks/AuthProvider";
 
+const AddNewFood = () => {
+    const { user } = useContext(AuthContext);
+
+    console.log(user);
+
+    const handleAddCar = e => {
+        e.preventDefault();
+        const form = e.target;
+
+        const foodname = form.foodname.value;
+        const categories = form.categories.value;
+        const madeby = form.madeby.value;
+        const origin = form.origin.value;
+        const quantity = form.quantity.value;
+        const image = form.image.value;
+        const description = form.description.value;
+
+        console.log(foodname, categories, madeby, origin, quantity, image, description);
+
+        const newFoodItem = { foodname, categories, madeby, origin, quantity, image, description };
+        console.log(newFoodItem);
+
+        fetch('', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newFoodItem)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'success!',
+                        text: 'Added succesfully',
+                        icon: 'success',
+                        confirmButtonText: 'Ok'
+                    })
+                    form.reset();
+                }
+            })
+    }
+
+    return (
+        <div className="max-w-7xl mx-auto px-6 py-28" >
             <div className="p-5 sm:p-10 xl:p-20 bg-[#f4f4f4] rounded">
                 <div className="mb-10">
                     <h1 className="text-[#fa8507] text-4xl font-semibold mb-4 text-center">
@@ -10,7 +55,7 @@ const AddNewFood = () => {
                     </h1>
                 </div>
 
-                <form>
+                <form onSubmit={handleAddCar}>
                     <div className="grid xl:grid-cols-2 gap-x-5">
                         <div className="w-full mx-auto mb-3">
                             <div className="flex flex-col">
@@ -38,7 +83,7 @@ const AddNewFood = () => {
                                     Made by
                                 </label>
 
-                                <input type="text" name="madeby" placeholder="Enter made by" className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg" />
+                                <input type="text" name="madeby" placeholder="Enter made by" defaultValue={user?.displayName} className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg" />
                             </div>
                         </div>
 
