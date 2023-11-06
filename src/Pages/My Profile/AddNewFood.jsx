@@ -16,15 +16,17 @@ const AddNewFood = () => {
         const madeby = form.madeby.value;
         const origin = form.origin.value;
         const quantity = form.quantity.value;
+        const price = form.price.value;
         const image = form.image.value;
         const description = form.description.value;
+        const email = user?.email;
 
-        console.log(foodname, categories, madeby, origin, quantity, image, description);
+        console.log(foodname, categories, madeby, origin, quantity, image, description, price, email);
 
-        const newFoodItem = { foodname, categories, madeby, origin, quantity, image, description };
+        const newFoodItem = { foodname, categories, madeby, origin, quantity, image, description, price, email };
         console.log(newFoodItem);
 
-        fetch('', {
+        fetch('http://127.0.0.1:5000/allFoodItems', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

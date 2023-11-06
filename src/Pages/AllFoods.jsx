@@ -1,7 +1,9 @@
+import { useLoaderData } from "react-router-dom";
 import FoodCard from "../Components/FoodCard";
 import SearchBar from "../Components/SearchBar";
 
 const AllFoods = () => {
+    const allFoodItems = useLoaderData();
     return (
         <div className="max-w-7xl mx-auto px-5 py-24">
 
@@ -10,15 +12,9 @@ const AllFoods = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <FoodCard />
-                <FoodCard />
-                <FoodCard />
-                <FoodCard />
-                <FoodCard />
-                <FoodCard />
-                <FoodCard />
-                <FoodCard />
-                <FoodCard />
+                {
+                    allFoodItems.map(foodItem => <FoodCard key={foodItem._id} foodItem={foodItem} />)
+                }
             </div>
 
             <div className="max-w-md flex justify-center mx-auto pt-14">

@@ -14,7 +14,7 @@ import UpdateFood from "../Pages/My Profile/UpdateFood";
 import Purchase from "../Pages/Purchase";
 import PrivateRoute from "./PrivateRoute";
 
-const router = createBrowserRouter ([
+const router = createBrowserRouter([
     {
         path: '/',
         element: <MainLayouts />,
@@ -25,11 +25,13 @@ const router = createBrowserRouter ([
             },
             {
                 path: 'allfoods',
-                element: <AllFoods />
+                element: <AllFoods />,
+                loader: () => fetch('http://127.0.0.1:5000/allFoodItems')
             },
             {
-                path: 'fooddetails',
-                element: <PrivateRoute><FoodDetails /></PrivateRoute>
+                path: 'fooddetails/:detailsId',
+                element: <PrivateRoute><FoodDetails /></PrivateRoute>,
+                loader: () => fetch('http://127.0.0.1:5000/allFoodItems')
             },
             {
                 path: 'blog',
