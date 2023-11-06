@@ -15,6 +15,14 @@ const OrderedFoodsCard = () => {
                         <p className="text-2xl text-[#fa8507]">
                             $14.45
                         </p>
+
+                        <p className="text-lg">
+                            12-10-2024
+                        </p>
+
+                        <p className="text-lg">
+                            Quantity: 1 items
+                        </p>
                     </div>
 
                     <div>

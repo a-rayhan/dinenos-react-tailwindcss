@@ -66,8 +66,9 @@ const router = createBrowserRouter([
                 element: <PrivateRoute><UpdateFood /></PrivateRoute>
             },
             {
-                path: 'purchase',
-                element: <PrivateRoute><Purchase /></PrivateRoute>
+                path: 'purchase/:purchaseId',
+                element: <PrivateRoute><Purchase /></PrivateRoute>,
+                loader: () => fetch('http://127.0.0.1:5000/allFoodItems')
             }
         ]
     }

@@ -1,4 +1,23 @@
+import { useContext, useEffect, useState } from "react";
+import { useLoaderData, useParams } from "react-router-dom";
+import { AuthContext } from "../Hooks/AuthProvider";
+
 const Purchase = () => {
+
+    const { user } = useContext(AuthContext);
+
+    const [foodItem, setFoodItem] = useState([]);
+
+    const foodsItem = useLoaderData();
+
+    const { purchaseId } = useParams();
+
+    useEffect(() => {
+        const findFoodId = foodsItem.find(foodItem => foodItem._id == purchaseId);
+        setFoodItem(findFoodId);
+    }, [purchaseId, foodsItem]);
+
+
     return (
         <div className="max-w-7xl mx-auto px-6 py-28" data-aos="fade-up"
             data-aos-duration="1000">
@@ -18,7 +37,7 @@ const Purchase = () => {
                                     Buyer Name
                                 </label>
 
-                                <input type="text" name="buyername" placeholder="Enter buyer name" className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg" required />
+                                <input type="text" name="buyername" defaultValue={user?.displayName} placeholder="Enter buyer name" className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg" required />
                             </div>
                         </div>
 
@@ -28,7 +47,7 @@ const Purchase = () => {
                                     Buyer Email
                                 </label>
 
-                                <input type="email" name="buyeremail" placeholder="Enter buyer email" className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg" />
+                                <input type="email" name="buyeremail" defaultValue={user?.email} placeholder="Enter buyer email" className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg" />
                             </div>
                         </div>
 
@@ -48,7 +67,17 @@ const Purchase = () => {
                                     Food Name
                                 </label>
 
-                                <input type="text" name="foodname" placeholder="Enter food name" className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg" />
+                                <input type="text" name="foodname" defaultValue={foodItem.foodname} placeholder="Enter food name" className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg" />
+                            </div>
+                        </div>
+
+                        <div className="w-full mx-auto mb-3">
+                            <div className="flex flex-col">
+                                <label className="px-4 mb-1">
+                                    Food Image
+                                </label>
+
+                                <input type="text" name="image" defaultValue={foodItem.image} placeholder="Enter image url" className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg" />
                             </div>
                         </div>
 
@@ -58,7 +87,7 @@ const Purchase = () => {
                                     Price
                                 </label>
 
-                                <input type="text" name="foodprice" placeholder="Enter price" className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg" />
+                                <input type="text" name="foodprice" defaultValue={foodItem.price} placeholder="Enter price" className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg" />
                             </div>
                         </div>
 

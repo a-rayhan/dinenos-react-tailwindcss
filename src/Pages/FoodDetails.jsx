@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
 import { NavLink, useLoaderData, useParams } from "react-router-dom";
 
+
 const FoodDetails = () => {
     const [foodItem, setFoodItem] = useState([]);
 
     const allFoodItems = useLoaderData();
 
     const { detailsId } = useParams();
-
-    // console.log(user);
 
     useEffect(() => {
         const findFoodId = allFoodItems.find(foodItems => foodItems._id == detailsId);
@@ -26,9 +25,9 @@ const FoodDetails = () => {
                     ${foodItem.price}.00
                 </p>
 
-                    <h2 className="text-3xl font-semibold mb-5">
-                        {foodItem.foodname}
-                    </h2>
+                <h2 className="text-3xl font-semibold mb-5">
+                    {foodItem.foodname}
+                </h2>
 
                 <div className="lg:flex items-center gap-8 mb-4">
                     <div className="flex items-center gap-3 mb-4 lg:mb-0">
@@ -38,7 +37,7 @@ const FoodDetails = () => {
                         <input type="number" defaultValue='1' name="" id="" className="border-2 rounded-lg px-2 w-14 py-1" />
                     </div>
 
-                    <NavLink to='/purchase' className="py-2 px-8 bg-[#fa8507] text-[#f5f4fa] cursor-pointer rounded text-xl font-medium">
+                    <NavLink to={`/purchase/${foodItem._id}`} className="py-2 px-8 bg-[#fa8507] text-[#f5f4fa] cursor-pointer rounded text-xl font-medium">
                         Order now
                     </NavLink>
                 </div>
@@ -49,11 +48,11 @@ const FoodDetails = () => {
                     </p>
 
                     <p className="text-lg">
-                       <span className="font-semibold"> Made by:</span> {foodItem.madeby}
+                        <span className="font-semibold"> Made by:</span> {foodItem.madeby}
                     </p>
 
                     <p className="text-lg">
-                       <span className="font-semibold"> Food Origin:</span> {foodItem.origin}
+                        <span className="font-semibold"> Food Origin:</span> {foodItem.origin}
                     </p>
                 </div>
 
