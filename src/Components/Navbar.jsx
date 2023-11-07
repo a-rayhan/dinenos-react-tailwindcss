@@ -168,15 +168,22 @@ const Navbar = () => {
                         }
 
 
-                        <div onClick={() => setToggleMenu(!toggleMenu)} className="lg:hidden">
+                        <div
+                            onClick={() => setToggleMenu(!toggleMenu)}
+                            className="lg:hidden">
 
                             {
-                                toggleMenu === true ? <FiGrid className="lg:hidden text-3xl cursor-pointer" /> : <FiGrid className="lg:hidden text-3xl cursor-pointer" />
+                                toggleMenu === true ?
+                                    <FiGrid className="lg:hidden text-3xl cursor-pointer" /> :
+                                    <FiGrid className="lg:hidden text-3xl cursor-pointer" />
                             }
 
-                            <ul className={`absolute w-full h-[600px] top-1/3 right-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 bg-[#ebe8fc] p-8 z-50 flex flex-col items-center pt-36 gap-y-6 text-2xl font-medium lg:hidden ${toggleMenu ? 'hidden' : ''}`}>
+                            <ul
+                                className={`absolute w-full h-[600px] top-1/3 right-2/4 left-2/4 -translate-x-2/4 -translate-y-2/4 bg-[#ebe8fc] p-8 z-50 flex flex-col items-center pt-36 gap-y-6 text-2xl font-medium lg:hidden ${toggleMenu ? 'hidden' : ''}`}>
                                 <li>
-                                    <NavLink to='/' className={({ isActive, isPending }) => isPending ? "" : isActive ? "text-[#fa8507]" : ""}>
+                                    <NavLink
+                                        to='/'
+                                        className={({ isActive, isPending }) => isPending ? "" : isActive ? "text-[#fa8507]" : ""}>
                                         Home
                                     </NavLink>
                                 </li>

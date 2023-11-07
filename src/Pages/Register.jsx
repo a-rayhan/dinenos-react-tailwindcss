@@ -69,14 +69,14 @@ const Register = () => {
 
     return (
         <div className="max-w-7xl mx-auto px-6 py-24" data-aos="fade-up"
-        data-aos-duration="1000">
+            data-aos-duration="1000">
             <Helmet>
                 <title> Dinenos - Register</title>
             </Helmet>
             <div className="bg-black max-w-3xl mx-auto p-10 md:p-20 rounded-3xl">
                 <div>
                     <h2 className="text-center text-2xl md:text-4xl font-semibold text-white mb-10">
-                       Register Now
+                        Register Now
                     </h2>
                 </div>
 
@@ -88,7 +88,13 @@ const Register = () => {
                                     Name <span className="text-[#fa8507]">*</span>
                                 </label>
 
-                                <input type="text" name="name" placeholder="Enter your name" className="max-w-2xl bg-[#fa8507] py-4 px-6 rounded-lg text-white placeholder:text-lg placeholder:text-white" required />
+                                <input
+                                    type="text"
+                                    name="name"
+                                    placeholder="Enter your name"
+                                    className="max-w-2xl bg-[#fa8507] py-4 px-6 rounded-lg text-white placeholder:text-lg placeholder:text-white"
+                                    required
+                                />
                             </div>
                         </div>
 
@@ -98,7 +104,13 @@ const Register = () => {
                                     Photo Url <span className="text-[#fa8507]">*</span>
                                 </label>
 
-                                <input type="text" name='img' placeholder="Enter your photo url" className="max-w-2xl bg-[#fa8507] py-4 px-6 rounded-lg text-white placeholder:text-lg placeholder:text-white" required />
+                                <input
+                                    type="text"
+                                    name='img'
+                                    placeholder="Enter your photo url"
+                                    className="max-w-2xl bg-[#fa8507] py-4 px-6 rounded-lg text-white placeholder:text-lg placeholder:text-white"
+                                    required
+                                />
                             </div>
                         </div>
 
@@ -108,7 +120,13 @@ const Register = () => {
                                     Email <span className="text-[#fa8507]">*</span>
                                 </label>
 
-                                <input type="email" name="email" placeholder="Enter your email" className="max-w-2xl bg-[#fa8507] py-4 px-6 rounded-lg text-white placeholder:text-lg placeholder:text-white" required />
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="Enter your email"
+                                    className="max-w-2xl bg-[#fa8507] py-4 px-6 rounded-lg text-white placeholder:text-lg placeholder:text-white"
+                                    required
+                                />
                             </div>
 
                             <p className="px-4 text-[#fa8507] text-sm mt-2">
@@ -122,7 +140,13 @@ const Register = () => {
                                     Password <span className="text-[#fa8507]">*</span>
                                 </label>
 
-                                <input type="password" name="password" placeholder="Enter your password" className="max-w-2xl bg-[#fa8507] py-4 px-6 rounded-lg text-white placeholder:text-lg placeholder:text-white" required />
+                                <input
+                                    type="password"
+                                    name="password"
+                                    placeholder="Enter your password"
+                                    className="max-w-2xl bg-[#fa8507] py-4 px-6 rounded-lg text-white placeholder:text-lg placeholder:text-white"
+                                    required
+                                />
                             </div>
 
                             <p className="px-4 text-[#fa8507] text-sm mt-2">
@@ -143,7 +167,9 @@ const Register = () => {
                         </p>
                     </div>
 
-                    <div onClick={() => handleSocialLogin(googleLogIn)} className="md:w-[500px] bg-transparent border-2 border-[#fa8507] hover:bg-[#fa8507] rounded-xl flex justify-center items-center gap-x-4 mt-10 mx-auto">
+                    <div
+                        onClick={() => handleSocialLogin(googleLogIn)}
+                        className="md:w-[500px] bg-transparent border-2 border-[#fa8507] hover:bg-[#fa8507] rounded-xl flex justify-center items-center gap-x-4 mt-10 mx-auto">
                         <div className="bg-white p-1 rounded-full">
                             <FcGoogle className="text-2xl" />
                         </div>

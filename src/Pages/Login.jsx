@@ -98,7 +98,13 @@ const Login = () => {
                                     Email <span className="text-[#fa8507]">*</span>
                                 </label>
 
-                                <input type="email" name="email" placeholder="Enter your email" className="max-w-2xl bg-[#fa8507] py-4 px-6 rounded-lg text-white placeholder:text-lg placeholder:text-white" required />
+                                <input
+                                    type="email"
+                                    name="email"
+                                    placeholder="Enter your email"
+                                    className="max-w-2xl bg-[#fa8507] py-4 px-6 rounded-lg text-white placeholder:text-lg placeholder:text-white"
+                                    required
+                                />
                             </div>
 
                             <p className="px-4 text-[#fa8507] text-sm mt-2">
@@ -112,7 +118,12 @@ const Login = () => {
                                     Password <span className="text-[#fa8507]">*</span>
                                 </label>
 
-                                <input type="password" name="password" placeholder="Enter your password" className="max-w-2xl bg-[#fa8507] py-4 px-6 rounded-lg text-white placeholder:text-lg placeholder:text-white" />
+                                <input
+                                    type="password"
+                                    name="password"
+                                    placeholder="Enter your password"
+                                    className="max-w-2xl bg-[#fa8507] py-4 px-6 rounded-lg text-white placeholder:text-lg placeholder:text-white"
+                                />
                             </div>
 
                             <p className="px-4 text-[#fa8507] text-sm mt-2">
@@ -133,7 +144,9 @@ const Login = () => {
                         </p>
                     </div>
 
-                    <div onClick={() => handleSocialLogin(googleLogIn)} className="md:w-[500px] bg-transparent border-2 border-[#fa8507] hover:bg-[#fa8507] rounded-xl flex justify-center items-center gap-x-4 mt-10 mx-auto">
+                    <div
+                        onClick={() => handleSocialLogin(googleLogIn)}
+                        className="md:w-[500px] bg-transparent border-2 border-[#fa8507] hover:bg-[#fa8507] rounded-xl flex justify-center items-center gap-x-4 mt-10 mx-auto">
                         <div className="bg-white p-1 rounded-full">
                             <FcGoogle className="text-2xl" />
                         </div>

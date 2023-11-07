@@ -61,8 +61,10 @@ const UpdateFood = () => {
     }
 
     return (
-        <div className="max-w-7xl mx-auto px-6 py-28" data-aos="fade-up"
-        data-aos-duration="1000">
+        <div
+            className="max-w-7xl mx-auto px-6 py-28"
+            data-aos="fade-up"
+            data-aos-duration="1000">
             <Helmet>
                 <title> Dinenos - Update food</title>
             </Helmet>
@@ -81,7 +83,14 @@ const UpdateFood = () => {
                                     Food Name
                                 </label>
 
-                                <input type="text" name="foodname" defaultValue={foodItem.foodname} placeholder="Enter food name" className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg" required />
+                                <input
+                                    type="text"
+                                    name="foodname"
+                                    defaultValue={foodItem.foodname}
+                                    placeholder="Enter food name"
+                                    className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg"
+                                    required
+                                />
                             </div>
                         </div>
 
@@ -91,7 +100,13 @@ const UpdateFood = () => {
                                     Categories
                                 </label>
 
-                                <input type="text" name="categories" defaultValue={foodItem.categories} placeholder="Enter categories" className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg" />
+                                <input
+                                    type="text"
+                                    name="categories"
+                                    defaultValue={foodItem.categories}
+                                    placeholder="Enter categories"
+                                    className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg"
+                                />
                             </div>
                         </div>
 
@@ -101,7 +116,13 @@ const UpdateFood = () => {
                                     Made by
                                 </label>
 
-                                <input type="text" name="madeby" defaultValue={foodItem.madeby} placeholder="Enter made by" className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg" />
+                                <input
+                                    type="text"
+                                    name="madeby"
+                                    defaultValue={foodItem.madeby}
+                                    placeholder="Enter made by"
+                                    className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg"
+                                />
                             </div>
                         </div>
 
@@ -111,7 +132,13 @@ const UpdateFood = () => {
                                     Food Origin
                                 </label>
 
-                                <input type="text" name="origin" defaultValue={foodItem.origin} placeholder="Enter origin" className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg" />
+                                <input
+                                    type="text"
+                                    name="origin"
+                                    defaultValue={foodItem.origin}
+                                    placeholder="Enter origin"
+                                    className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg"
+                                />
                             </div>
                         </div>
 
@@ -121,7 +148,13 @@ const UpdateFood = () => {
                                     Price
                                 </label>
 
-                                <input type="text" name="price" defaultValue={foodItem.price} placeholder="Enter price" className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg" />
+                                <input
+                                    type="text"
+                                    name="price"
+                                    defaultValue={foodItem.price}
+                                    placeholder="Enter price"
+                                    className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg"
+                                />
                             </div>
                         </div>
 
@@ -131,7 +164,13 @@ const UpdateFood = () => {
                                     Total Quantity
                                 </label>
 
-                                <input type="number" name="quantity" defaultValue={foodItem.quantity} placeholder="Enter quantity" className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg" />
+                                <input
+                                    type="number"
+                                    name="quantity"
+                                    defaultValue={foodItem.quantity}
+                                    placeholder="Enter quantity"
+                                    className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg"
+                                />
                             </div>
                         </div>
                     </div>
@@ -142,7 +181,13 @@ const UpdateFood = () => {
                                 Food Image
                             </label>
 
-                            <input type="text" name="image" defaultValue={foodItem.image} placeholder="Enter image url" className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg" />
+                            <input
+                                type="text"
+                                name="image"
+                                defaultValue={foodItem.image}
+                                placeholder="Enter image url"
+                                className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg"
+                            />
                         </div>
                     </div>
 
@@ -152,7 +197,14 @@ const UpdateFood = () => {
                                 Description
                             </label>
 
-                            <textarea rows={5} type="text" name="description" defaultValue={foodItem.description} placeholder="Enter description" className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg" />
+                            <textarea
+                                rows={5}
+                                type="text"
+                                name="description"
+                                defaultValue={foodItem.description}
+                                placeholder="Enter description"
+                                className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg"
+                            />
                         </div>
                     </div>
 

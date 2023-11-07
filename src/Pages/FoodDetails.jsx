@@ -38,7 +38,13 @@ const FoodDetails = () => {
                         <p className="text-xl">
                             Quantity:
                         </p>
-                        <input type="number" defaultValue='1' name="" id="" className="border-2 rounded-lg px-2 w-14 py-1" />
+                        <input
+                            type="number"
+                            defaultValue='1'
+                            name=""
+                            id=""
+                            className="border-2 rounded-lg px-2 w-14 py-1"
+                        />
                     </div>
 
                     <NavLink to={`/purchase/${foodItem._id}`} className="py-2 px-8 bg-[#fa8507] text-[#f5f4fa] cursor-pointer rounded text-xl font-medium">

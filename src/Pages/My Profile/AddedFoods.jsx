@@ -17,8 +17,10 @@ const AddedFoods = () => {
         setFoodsItems(foodsItemsFilter);
     }, [user, allFoodsItems]);
     return (
-        <div className="max-w-7xl mx-auto px-5 py-24" data-aos="fade-up"
-        data-aos-duration="1000">
+        <div
+            className="max-w-7xl mx-auto px-5 py-24"
+            data-aos="fade-up"
+            data-aos-duration="1000">
             <Helmet>
                 <title> Dinenos - Added foods</title>
             </Helmet>

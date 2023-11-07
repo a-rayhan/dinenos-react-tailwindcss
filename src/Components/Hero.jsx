@@ -4,7 +4,7 @@ import './Hero.css'
 const Hero = () => {
     return (
         <div
-            className="z-10 hero-bg relative flex items-center justify-start" 
+            className="z-10 hero-bg relative flex items-center justify-start"
             data-aos="fade-zoom-in"
             data-aos-easing="ease-in-back"
             data-aos-delay="800"
@@ -32,7 +32,9 @@ const Hero = () => {
                     </p>
                 </div>
 
-                <NavLink to='/allfoods' className='bg-[#fa8507] uppercase py-3 px-6 rounded-lg text-lg text-white font-semibold cursor-pointer'>
+                <NavLink
+                    to='/allfoods'
+                    className='bg-[#fa8507] uppercase py-3 px-6 rounded-lg text-lg text-white font-semibold cursor-pointer'>
                     Explore more
                 </NavLink>
             </div>

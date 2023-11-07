@@ -62,7 +62,7 @@ const Purchase = () => {
 
     return (
         <div className="max-w-7xl mx-auto px-6 py-28" data-aos="fade-up"
-        data-aos-duration="1000">
+            data-aos-duration="1000">
             <Helmet>
                 <title> Dinenos - Purchase</title>
             </Helmet>
@@ -81,7 +81,14 @@ const Purchase = () => {
                                     Buyer Name
                                 </label>
 
-                                <input type="text" name="buyername" defaultValue={user?.displayName} placeholder="Enter buyer name" className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg" required />
+                                <input
+                                    type="text"
+                                    name="buyername"
+                                    defaultValue={user?.displayName}
+                                    placeholder="Enter buyer name"
+                                    className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg"
+                                    required
+                                />
                             </div>
                         </div>
 
@@ -91,7 +98,13 @@ const Purchase = () => {
                                     Buyer Email
                                 </label>
 
-                                <input type="email" name="buyeremail" defaultValue={user?.email} placeholder="Enter buyer email" className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg" />
+                                <input
+                                    type="email"
+                                    name="buyeremail"
+                                    defaultValue={user?.email}
+                                    placeholder="Enter buyer email"
+                                    className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg"
+                                />
                             </div>
                         </div>
 
@@ -101,7 +114,12 @@ const Purchase = () => {
                                     Buying Date
                                 </label>
 
-                                <input type="date" name="buyingdate" placeholder="Enter buying date" className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg" />
+                                <input
+                                    type="date"
+                                    name="buyingdate"
+                                    placeholder="Enter buying date"
+                                    className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg"
+                                />
                             </div>
                         </div>
 
@@ -111,7 +129,13 @@ const Purchase = () => {
                                     Food Name
                                 </label>
 
-                                <input type="text" name="foodname" defaultValue={foodItem.foodname} placeholder="Enter food name" className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg" />
+                                <input
+                                    type="text"
+                                    name="foodname"
+                                    defaultValue={foodItem.foodname}
+                                    placeholder="Enter food name"
+                                    className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg"
+                                />
                             </div>
                         </div>
 
@@ -121,7 +145,13 @@ const Purchase = () => {
                                     Food Image
                                 </label>
 
-                                <input type="text" name="image" defaultValue={foodItem.image} placeholder="Enter image url" className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg" />
+                                <input
+                                    type="text"
+                                    name="image"
+                                    defaultValue={foodItem.image}
+                                    placeholder="Enter image url"
+                                    className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg"
+                                />
                             </div>
                         </div>
 
@@ -131,7 +161,13 @@ const Purchase = () => {
                                     Price
                                 </label>
 
-                                <input type="text" name="foodprice" defaultValue={foodItem.price} placeholder="Enter price" className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg" />
+                                <input
+                                    type="text"
+                                    name="foodprice"
+                                    defaultValue={foodItem.price}
+                                    placeholder="Enter price"
+                                    className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg"
+                                />
                             </div>
                         </div>
 
@@ -141,7 +177,13 @@ const Purchase = () => {
                                     Quantity
                                 </label>
 
-                                <input type="number" name="foodquantity" placeholder="Enter quantity" defaultValue={1} className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg" />
+                                <input
+                                    type="number"
+                                    name="foodquantity"
+                                    placeholder="Enter quantity"
+                                    defaultValue={1}
+                                    className="border-2 border-[#434344] py-4 px-6 rounded-lg placeholder:text-lg"
+                                />
                             </div>
                         </div>
                     </div>
