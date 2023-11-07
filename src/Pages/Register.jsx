@@ -3,6 +3,7 @@ import { FcGoogle } from "react-icons/fc";
 import { NavLink, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import { AuthContext } from "../Hooks/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
 
@@ -68,6 +69,9 @@ const Register = () => {
 
     return (
         <div className="max-w-7xl mx-auto px-6 py-24">
+            <Helmet>
+                <title> Dinenos - Register</title>
+            </Helmet>
             <div className="bg-black max-w-3xl mx-auto p-10 md:p-20 rounded-3xl">
                 <div>
                     <h2 className="text-center text-2xl md:text-4xl font-semibold text-white mb-10">

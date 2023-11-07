@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const SearchBar = () => {
     return (
         <div className="max-w-[800px] mx-auto relative">

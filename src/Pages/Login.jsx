@@ -3,6 +3,8 @@ import { useContext, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import Swal from "sweetalert2";
 import { AuthContext } from "../Hooks/AuthProvider";
+import axios from "axios";
+import { Helmet } from "react-helmet-async";
 
 const Login = () => {
 
@@ -58,6 +60,16 @@ const Login = () => {
                         })
                         navigate(location?.state ? location.state : '/')
 
+                        const logInUser = result.user;
+                        console.log(logInUser);
+                        const user = { email };
+
+                        // get access token
+                        axios.post('http://127.0.0.1:5000/jwt', user, { withCredentials: true })
+                            .then(data => {
+                                console.log(data.data);
+                            })
+
                     })
                     .catch(error => {
                         setError('Wrong email address')
@@ -68,6 +80,9 @@ const Login = () => {
 
     return (
         <div className="max-w-7xl mx-auto px-6 py-24">
+            <Helmet>
+                <title> Dinenos - Login</title>
+            </Helmet>
             <div className="bg-black max-w-3xl mx-auto p-10 md:p-20 rounded-3xl">
                 <div>
                     <h2 className="text-center text-2xl md:text-4xl font-semibold text-white mb-10">

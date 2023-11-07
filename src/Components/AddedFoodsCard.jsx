@@ -3,7 +3,7 @@ import { FiEdit2 } from "react-icons/fi";
 import { NavLink, useParams } from "react-router-dom";
 
 const AddedFoodsCard = ({ foodsItem }) => {
-    const { _id, foodname, categories, quantity, image, price } = foodsItem;
+    const { _id, foodname, categories, image, price } = foodsItem;
 
     const { id } = useParams();
 
@@ -19,7 +19,7 @@ const AddedFoodsCard = ({ foodsItem }) => {
                     </div>
                 </div>
 
-                <NavLink to='/updatefood' className="absolute bottom-4 right-4 bg-white py-1 px-2 text-sm rounded-lg">
+                <NavLink to={`/updatefood/${_id}`} className="absolute bottom-4 right-4 bg-white py-1 px-2 text-sm rounded-lg">
                     <div className="flex items-center gap-2">
                         <p>
                             Update

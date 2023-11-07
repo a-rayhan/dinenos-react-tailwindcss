@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import AddedFoodsCard from "../../Components/AddedFoodsCard";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Hooks/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const AddedFoods = () => {
     const [foodsItems, setFoodsItems] = useState([]);
@@ -17,6 +18,9 @@ const AddedFoods = () => {
     }, [user, allFoodsItems]);
     return (
         <div className="max-w-7xl mx-auto px-5 py-24">
+            <Helmet>
+                <title> Dinenos - Added foods</title>
+            </Helmet>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {
                     foodsItems.map(foodsItem => <AddedFoodsCard key={foodsItem._id} foodsItem={foodsItem} />)

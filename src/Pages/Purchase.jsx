@@ -2,6 +2,7 @@ import { useContext, useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { AuthContext } from "../Hooks/AuthProvider";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const Purchase = () => {
 
@@ -60,9 +61,10 @@ const Purchase = () => {
 
 
     return (
-        <div className="max-w-7xl mx-auto px-6 py-28" data-aos="fade-up"
-            data-aos-duration="1000">
-
+        <div className="max-w-7xl mx-auto px-6 py-28">
+            <Helmet>
+                <title> Dinenos - Purchase</title>
+            </Helmet>
             <div className="p-5 sm:p-10 xl:p-20 bg-[#f4f4f4] rounded">
                 <div className="mb-10">
                     <h1 className="text-[#fa8507] text-4xl font-semibold mb-4 text-center">

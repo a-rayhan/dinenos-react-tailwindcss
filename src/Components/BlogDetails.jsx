@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { useLoaderData, useParams } from "react-router-dom";
 
 const BlogDetails = () => {
@@ -17,6 +18,9 @@ const BlogDetails = () => {
 
     return (
         <div className="max-w-7xl mx-auto px-5 py-24">
+            <Helmet>
+                <title> Dinenos - Blog details</title>
+            </Helmet>
             <div className="max-w-[1000px] h-[500px] mx-auto rounded-2xl">
                 <img src={blog.img} alt="" className="w-full h-full object-cover rounded-2xl" />
             </div>
