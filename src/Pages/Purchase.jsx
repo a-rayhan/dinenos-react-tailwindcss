@@ -61,7 +61,8 @@ const Purchase = () => {
 
 
     return (
-        <div className="max-w-7xl mx-auto px-6 py-28">
+        <div className="max-w-7xl mx-auto px-6 py-28" data-aos="fade-up"
+        data-aos-duration="1000">
             <Helmet>
                 <title> Dinenos - Purchase</title>
             </Helmet>

@@ -6,7 +6,8 @@ const BlogCard = ({ blog }) => {
     const { blogId } = useParams();
 
     return (
-        <div className="h-[300px] flex items-center gap-14 bg-slate-300 rounded-xl">
+        <div className="h-[300px] flex items-center gap-14 bg-slate-300 rounded-xl" data-aos="fade-up"
+        data-aos-duration="1000">
             <img src={img} alt="" className="h-full w-[350px] object-cover rounded-xl" />
 
             <div className="flex-1">

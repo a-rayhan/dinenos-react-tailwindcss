@@ -3,7 +3,12 @@ import './Hero.css'
 
 const Hero = () => {
     return (
-        <div className="z-10 hero-bg relative flex items-center justify-start">
+        <div
+            className="z-10 hero-bg relative flex items-center justify-start" 
+            data-aos="fade-zoom-in"
+            data-aos-easing="ease-in-back"
+            data-aos-delay="800"
+            data-aos-offset="0">
             <div className="-z-10 absolute bg-black top-0 w-full h-full opacity-40">
 
             </div>

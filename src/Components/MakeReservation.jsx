@@ -2,7 +2,8 @@ import { NavLink } from "react-router-dom";
 
 const MakeReservation = () => {
     return (
-        <div className="bg-black">
+        <div className="bg-black" data-aos="fade-up"
+        data-aos-duration="1000">
             <div className="max-w-7xl mx-auto px-5 py-24">
                 <h2 className="text-4xl font-semibold mb-10 text-white">
                     Make Reservation

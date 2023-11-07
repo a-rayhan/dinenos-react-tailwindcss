@@ -8,7 +8,8 @@ const AddedFoodsCard = ({ foodsItem }) => {
     const { id } = useParams();
 
     return (
-        <div className="w-full rounded-lg cursor-pointer bg-gray-100 p-4">
+        <div className="w-full rounded-lg cursor-pointer bg-gray-100 p-4" data-aos="fade-up"
+        data-aos-duration="1000">
             <div className="w-full h-56 rounded-2xl bg-slate-400 mb-4 relative">
                 <img src={image} alt="" className="w-full h-full rounded-2xl object-cover" />
 
