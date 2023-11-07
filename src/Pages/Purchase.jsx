@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { AuthContext } from "../Hooks/AuthProvider";
+import Swal from "sweetalert2";
 
 const Purchase = () => {
 
@@ -18,6 +19,46 @@ const Purchase = () => {
     }, [purchaseId, foodsItem]);
 
 
+    const handlePuchaseItem = e => {
+        e.preventDefault();
+        const form = e.target;
+
+        const buyername = form.buyername.value;
+        const buyeremail = form.buyeremail.value;
+        const buyingdate = form.buyingdate.value;
+        const foodname = form.foodname.value;
+        const image = form.image.value;
+        const foodprice = form.foodprice.value;
+        const foodquantity = form.foodquantity.value;
+
+        console.log(buyername, buyeremail, buyingdate, foodname, image, foodprice, foodquantity);
+
+        const purchaseFoodItem = { buyername, buyeremail, buyingdate, foodname, image, foodprice, foodquantity };
+        console.log(purchaseFoodItem);
+
+        fetch('http://127.0.0.1:5000/purchasedata', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(purchaseFoodItem)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    Swal.fire({
+                        title: 'success!',
+                        text: 'Purchase succesfully',
+                        icon: 'success',
+                        confirmButtonText: 'Ok'
+                    })
+                    form.reset();
+                }
+            })
+    }
+
+
     return (
         <div className="max-w-7xl mx-auto px-6 py-28" data-aos="fade-up"
             data-aos-duration="1000">
@@ -29,7 +70,7 @@ const Purchase = () => {
                     </h1>
                 </div>
 
-                <form>
+                <form onSubmit={handlePuchaseItem}>
                     <div className="grid gap-x-5">
                         <div className="w-full mx-auto mb-3">
                             <div className="flex flex-col">

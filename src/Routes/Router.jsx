@@ -13,11 +13,13 @@ import OrderedFoods from "../Pages/My Profile/OrderedFoods";
 import UpdateFood from "../Pages/My Profile/UpdateFood";
 import Purchase from "../Pages/Purchase";
 import PrivateRoute from "./PrivateRoute";
+import ErrorPage from "../Pages/ErrorPage";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <MainLayouts />,
+        errorElement: <ErrorPage />,
         children: [
             {
                 path: '/',
@@ -35,11 +37,13 @@ const router = createBrowserRouter([
             },
             {
                 path: 'blog',
-                element: <Blog />
+                element: <Blog />,
+                loader: () => fetch('http://127.0.0.1:5000/blog')
             },
             {
-                path: 'blogdetails',
-                element: <BlogDetails />
+                path: 'blogdetails/:blogId',
+                element: <BlogDetails />,
+                loader: () => fetch('http://127.0.0.1:5000/blog')
             },
             {
                 path: 'login',
@@ -51,7 +55,8 @@ const router = createBrowserRouter([
             },
             {
                 path: 'addedfoods',
-                element: <PrivateRoute><AddedFoods /></PrivateRoute>
+                element: <PrivateRoute><AddedFoods /></PrivateRoute>,
+                loader: () => fetch('http://127.0.0.1:5000/allFoodItems')
             },
             {
                 path: 'addnew',
@@ -59,7 +64,8 @@ const router = createBrowserRouter([
             },
             {
                 path: 'orderedfoods',
-                element: <PrivateRoute><OrderedFoods /></PrivateRoute>
+                element: <PrivateRoute><OrderedFoods /></PrivateRoute>,
+                loader: () => fetch('http://127.0.0.1:5000/purchasedata')
             },
             {
                 path: 'updatefood',

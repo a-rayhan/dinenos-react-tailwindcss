@@ -59,7 +59,7 @@ const Navbar = () => {
                                             <div className="dropdown dropdown-end inline-flex">
                                                 <div tabIndex={0} className="avatar">
                                                     <div className="w-10 h-10 rounded-full ring ring-[#fa8507] ring-offset-base-100 ring-offset-2">
-                                                        <img src="https://images.unsplash.com/photo-1508978644997-53cc5bfb8a03?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                                                        <img src={user?.photoURL} />
                                                     </div>
                                                 </div>
 
@@ -67,11 +67,11 @@ const Navbar = () => {
 
                                                     <div className="mb-8">
                                                         <p className="text-center text-xl font-medium">
-                                                            Abu Rayhan
+                                                            {user?.displayName}
                                                         </p>
 
                                                         <p className="text-center">
-                                                            aburayhandh@gmail.com
+                                                            {user?.email}
                                                         </p>
                                                     </div>
 
@@ -106,7 +106,7 @@ const Navbar = () => {
                         </div>
                     </ul>
 
-                    <div className="lg:hidden flex items-center gap-x-4">
+                    <div className="lg:hidden flex items-center gap-x-4 z-50">
                         {
                             user &&
                             <>
@@ -114,7 +114,7 @@ const Navbar = () => {
                                     <div className="dropdown dropdown-end inline-flex">
                                         <div tabIndex={0} className="avatar">
                                             <div className="w-10 h-10 rounded-full ring ring-[#fa8507] ring-offset-2">
-                                                <img src="https://images.unsplash.com/photo-1508978644997-53cc5bfb8a03?auto=format&fit=crop&q=80&w=1887&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" className="w-full h-full rounded-full object-cover" />
+                                                <img src={user?.photoURL} className="w-full h-full rounded-full object-cover" />
                                             </div>
                                         </div>
 
@@ -122,33 +122,33 @@ const Navbar = () => {
 
                                             <div className="mb-8">
                                                 <p className="text-center text-xl font-medium">
-                                                    Abu Rayhan
+                                                    {user?.displayName}
                                                 </p>
 
                                                 <p className="text-center">
-                                                    aburayhandh@gmail.com
+                                                    {user?.email}
                                                 </p>
                                             </div>
 
                                             <ul className="w-full cursor-pointer">
-                                                <li className='hover:bg-slate-300'>
-                                                    <NavLink to='/addedfoods' className='p-3'>
+                                                <li className='hover:bg-slate-300 p-3'>
+                                                    <NavLink to='/addedfoods'>
                                                         My added foods
                                                     </NavLink>
                                                 </li>
 
                                                 <hr />
 
-                                                <li className='hover:bg-slate-300'>
-                                                    <NavLink to='/addnew' className='p-3'>
+                                                <li className='hover:bg-slate-300 p-3'>
+                                                    <NavLink to='/addnew'>
                                                         Add new food
                                                     </NavLink>
                                                 </li>
 
                                                 <hr />
 
-                                                <li className='hover:bg-slate-300 '>
-                                                    <NavLink to='/orderedfoods' className='p-3'>
+                                                <li className='hover:bg-slate-300 p-3'>
+                                                    <NavLink to='/orderedfoods'>
                                                         My ordered items
                                                     </NavLink>
                                                 </li>

@@ -1,9 +1,11 @@
 import { useLoaderData } from "react-router-dom";
 import FoodCard from "../Components/FoodCard";
 import SearchBar from "../Components/SearchBar";
+import { useEffect, useState } from "react";
 
 const AllFoods = () => {
     const allFoodItems = useLoaderData();
+    
     return (
         <div className="max-w-7xl mx-auto px-5 py-24">
 
