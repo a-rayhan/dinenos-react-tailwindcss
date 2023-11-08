@@ -1,4 +1,6 @@
 import { ImSpoonKnife } from "react-icons/im";
+import { BsFacebook, BsYoutube } from "react-icons/bs";
+import { AiFillInstagram } from "react-icons/ai";
 import { NavLink } from "react-router-dom";
 
 const Footer = () => {
@@ -43,6 +45,12 @@ const Footer = () => {
                             <p className="text-[#434344]">
                                 Mon - Sat 8.00 - 18.00 Sunday CLOSED
                             </p>
+
+                            <div className="flex gap-4 text-3xl mt-5">
+                                <BsFacebook />
+                                <AiFillInstagram />
+                                <BsYoutube />
+                            </div>
                         </div>
 
                         <div>
