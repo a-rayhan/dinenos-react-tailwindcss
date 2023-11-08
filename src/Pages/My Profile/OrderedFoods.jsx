@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { NavLink, useLoaderData } from "react-router-dom";
 import OrderedFoodsCard from "../../Components/OrderedFoodsCard";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Hooks/AuthProvider";
@@ -64,6 +64,23 @@ const OrderedFoods = () => {
             <div className="flex flex-col gap-5">
                 {
                     purchaseFoods.map(purchaseItem => <OrderedFoodsCard key={purchaseItem._id} purchaseItem={purchaseItem} handleDeleteItem={handleDeleteItem} />)
+                }
+
+                {
+                    purchaseFoods.length === 0 && (
+                        <div className="pb-28">
+                            <p className="text-[#fa8507] text-3xl font-semibold mb-4 text-center">
+                                There is no product here.
+                            </p>
+                            <NavLink to='/allfoods'>
+                                <div className="flex justify-center">
+                                    <button className="text-lg bg-[#fa8507] px-8 py-4 rounded-xl text-white font-medium">
+                                        Buy Now
+                                    </button>
+                                </div>
+                            </NavLink>
+                        </div>
+                    )
                 }
             </div>
         </div>

@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { NavLink, useLoaderData } from "react-router-dom";
 import AddedFoodsCard from "../../Components/AddedFoodsCard";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Hooks/AuthProvider";
@@ -27,6 +27,23 @@ const AddedFoods = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {
                     foodsItems.map(foodsItem => <AddedFoodsCard key={foodsItem._id} foodsItem={foodsItem} />)
+                }
+
+                {
+                    foodsItems.length === 0 && (
+                        <div className="py-24">
+                            <p className="text-[#fa8507] text-3xl font-semibold mb-4 text-center">
+                                There is no product here.
+                            </p>
+                            <NavLink to='/allfoods'>
+                                <div className="flex justify-center">
+                                    <button className="text-lg bg-[#fa8507] px-8 py-4 rounded-xl text-white font-medium">
+                                        Buy Now
+                                    </button>
+                                </div>
+                            </NavLink>
+                        </div>
+                    )
                 }
             </div>
         </div>
