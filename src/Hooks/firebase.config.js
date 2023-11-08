@@ -5,12 +5,12 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCQuqk0hCnxLKr7mI9tanb03bvzIrxBJtA",
-  authDomain: "grand-car-e8557.firebaseapp.com",
-  projectId: "grand-car-e8557",
-  storageBucket: "grand-car-e8557.appspot.com",
-  messagingSenderId: "881718787209",
-  appId: "1:881718787209:web:37b1b23ac3dea6058f5a58"
+  apiKey: "AIzaSyA1OvJoIKqUAwdmZ3Mzx6FS82BAhDCrYWc",
+  authDomain: "dinenos.firebaseapp.com",
+  projectId: "dinenos",
+  storageBucket: "dinenos.appspot.com",
+  messagingSenderId: "860848037636",
+  appId: "1:860848037636:web:b8947ab406471a4fedba51"
 };
 
 // Initialize Firebase
