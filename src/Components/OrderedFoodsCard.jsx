@@ -1,6 +1,6 @@
-const OrderedFoodsCard = ({ purchaseItem }) => {
+const OrderedFoodsCard = ({ purchaseItem, handleDeleteItem }) => {
 
-    const { buyingdate, foodname, image, foodprice, foodquantity } = purchaseItem;
+    const { _id, buyingdate, foodname, image, foodprice, foodquantity } = purchaseItem;
 
     return (
         <div>
@@ -29,7 +29,7 @@ const OrderedFoodsCard = ({ purchaseItem }) => {
                     </div>
 
                     <div>
-                        <button className="py-2 px-4 text-[#fa8507] border border-[#fa8507] cursor-pointer rounded font-medium">
+                        <button onClick={() => handleDeleteItem(_id)} className="py-2 px-4 text-[#fa8507] border border-[#fa8507] cursor-pointer rounded font-medium">
                             Remove
                         </button>
                     </div>
