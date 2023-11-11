@@ -37,7 +37,7 @@ const Purchase = () => {
         const purchaseFoodItem = { buyername, buyeremail, buyingdate, foodname, image, foodprice, foodquantity };
         console.log(purchaseFoodItem);
 
-        fetch('http://127.0.0.1:5000/purchasedata', {
+        fetch('https://dinenos-server-667svyakr-abu-rayhans-projects.vercel.app/purchasedata', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

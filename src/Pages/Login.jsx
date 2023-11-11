@@ -60,16 +60,6 @@ const Login = () => {
                         })
                         navigate(location?.state ? location.state : '/')
 
-                        const logInUser = result.user;
-                        console.log(logInUser);
-                        const user = { email };
-
-                        // get access token
-                        axios.post('http://127.0.0.1:5000/jwt', user, { withCredentials: true })
-                            .then(data => {
-                                console.log(data.data);
-                            })
-
                     })
                     .catch(error => {
                         setError('Wrong email address')

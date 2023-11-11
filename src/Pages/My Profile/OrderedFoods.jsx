@@ -34,7 +34,7 @@ const OrderedFoods = () => {
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
             if (result.isConfirmed) {
-                fetch(`http://127.0.0.1:5000/purchasedata/${id}`, {
+                fetch(`https://dinenos-server-667svyakr-abu-rayhans-projects.vercel.app/purchasedata/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

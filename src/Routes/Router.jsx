@@ -28,22 +28,22 @@ const router = createBrowserRouter([
             {
                 path: 'allfoods',
                 element: <AllFoods />,
-                loader: () => fetch('http://127.0.0.1:5000/allFoodItems')
+                loader: () => fetch('https://dinenos-server-667svyakr-abu-rayhans-projects.vercel.app/allFoodItems')
             },
             {
                 path: 'fooddetails/:detailsId',
                 element: <PrivateRoute><FoodDetails /></PrivateRoute>,
-                loader: () => fetch('http://127.0.0.1:5000/allFoodItems')
+                loader: () => fetch('https://dinenos-server-667svyakr-abu-rayhans-projects.vercel.app/allFoodItems')
             },
             {
                 path: 'blog',
                 element: <Blog />,
-                loader: () => fetch('http://127.0.0.1:5000/blog')
+                loader: () => fetch('https://dinenos-server-667svyakr-abu-rayhans-projects.vercel.app/blog')
             },
             {
                 path: 'blogdetails/:blogId',
                 element: <BlogDetails />,
-                loader: () => fetch('http://127.0.0.1:5000/blog')
+                loader: () => fetch('https://dinenos-server-667svyakr-abu-rayhans-projects.vercel.app/blog')
             },
             {
                 path: 'login',
@@ -56,7 +56,7 @@ const router = createBrowserRouter([
             {
                 path: 'addedfoods',
                 element: <PrivateRoute><AddedFoods /></PrivateRoute>,
-                loader: () => fetch('http://127.0.0.1:5000/allFoodItems')
+                loader: () => fetch('https://dinenos-server-667svyakr-abu-rayhans-projects.vercel.app/allFoodItems')
             },
             {
                 path: 'addnew',
@@ -65,17 +65,17 @@ const router = createBrowserRouter([
             {
                 path: 'orderedfoods',
                 element: <PrivateRoute><OrderedFoods /></PrivateRoute>,
-                loader: () => fetch('http://127.0.0.1:5000/purchasedata')
+                loader: () => fetch('https://dinenos-server-667svyakr-abu-rayhans-projects.vercel.app/purchasedata')
             },
             {
                 path: 'updatefood/:updateId',
                 element: <PrivateRoute><UpdateFood /></PrivateRoute>,
-                loader: () => fetch('http://127.0.0.1:5000/allFoodItems')
+                loader: () => fetch('https://dinenos-server-667svyakr-abu-rayhans-projects.vercel.app/allFoodItems')
             },
             {
                 path: 'purchase/:purchaseId',
                 element: <PrivateRoute><Purchase /></PrivateRoute>,
-                loader: () => fetch('http://127.0.0.1:5000/allFoodItems')
+                loader: () => fetch('https://dinenos-server-667svyakr-abu-rayhans-projects.vercel.app/allFoodItems')
             }
         ]
     }

@@ -27,7 +27,7 @@ const AddNewFood = () => {
         const newFoodItem = { foodname, categories, madeby, origin, quantity, image, description, price, email };
         console.log(newFoodItem);
 
-        fetch('http://127.0.0.1:5000/allFoodItems', {
+        fetch('https://dinenos-server-667svyakr-abu-rayhans-projects.vercel.app/allFoodItems', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

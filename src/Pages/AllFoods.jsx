@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet-async";
 
 const AllFoods = () => {
     const allFoodItems = useLoaderData();
+    console.log(allFoodItems);
     
     return (
         <div className="max-w-7xl mx-auto px-5 py-24" data-aos="fade-up"

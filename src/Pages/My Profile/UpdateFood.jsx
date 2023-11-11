@@ -38,7 +38,7 @@ const UpdateFood = () => {
         const updateFoodItem = { foodname, categories, madeby, origin, quantity, image, description, price, email };
         console.log(updateFoodItem);
 
-        fetch(`http://127.0.0.1:5000/allFoodItems/${foodItem._id}`, {
+        fetch(`https://dinenos-server-667svyakr-abu-rayhans-projects.vercel.app/allFoodItems/${foodItem._id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
